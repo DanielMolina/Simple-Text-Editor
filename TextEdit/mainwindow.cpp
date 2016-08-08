@@ -52,6 +52,7 @@ void MainWindow::on_pushButton_open_clicked()
     // only open file if box is checked
     if(ui->checkBox_open->isChecked())
     {
+        ui->label->setText("Input file name");
         QString filename = ui->textEdit_openFile->toPlainText();
         ui->textEdit->setDocumentTitle(filename);
         fstream file;
@@ -75,4 +76,16 @@ void MainWindow::on_pushButton_open_clicked()
             ui->label_open->setText("unable to open file");
         }
     }
+}
+
+// opens a new document when button is clicked
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->textEdit->clear();
+    ui->textEdit_openFile->clear();
+    ui->textEdit_filename->clear();
+    ui->checkBox_open->setChecked(false);
+    ui->checkBox->setChecked(false);
+    ui->label->setText("Input file name");
+    ui->label_open->setText("Input file name [include extension]");
 }

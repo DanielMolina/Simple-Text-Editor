@@ -39,6 +39,7 @@ public:
     QTextEdit *textEdit_openFile;
     QCheckBox *checkBox_open;
     QLabel *label_open;
+    QPushButton *pushButton_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -47,7 +48,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(781, 530);
+        MainWindow->resize(781, 548);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         textEdit = new QTextEdit(centralWidget);
@@ -77,6 +78,9 @@ public:
         label_open = new QLabel(centralWidget);
         label_open->setObjectName(QStringLiteral("label_open"));
         label_open->setGeometry(QRect(390, 440, 381, 20));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(10, 470, 75, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -99,10 +103,11 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "TextEdit", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Save", 0));
         checkBox->setText(QApplication::translate("MainWindow", "Confirm", 0));
-        label->setText(QApplication::translate("MainWindow", "Input filename", 0));
+        label->setText(QApplication::translate("MainWindow", "Input file name", 0));
         pushButton_open->setText(QApplication::translate("MainWindow", "Open", 0));
         checkBox_open->setText(QApplication::translate("MainWindow", "Confirm", 0));
-        label_open->setText(QApplication::translate("MainWindow", "Input filename [include extension]", 0));
+        label_open->setText(QApplication::translate("MainWindow", "Input file name [include extension]", 0));
+        pushButton_2->setText(QApplication::translate("MainWindow", "New File", 0));
     } // retranslateUi
 
 };
